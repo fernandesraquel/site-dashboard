@@ -1,10 +1,10 @@
-import os
 import pandas as pd
 import dash
 from dash import dcc, html
 import plotly.express as px
 import plotly.graph_objects as go
 
+# Dados Fictícios - Substitua com dados reais
 df_casos_anos = pd.DataFrame({
   'Ano': [2020, 2021, 2022, 2023, 2024],
   'Dengue': [6766, 16443, 29253, 7240, 13370],
@@ -72,8 +72,7 @@ app.layout = html.Div([
 
 # Run the app
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8050))
-    app.run_server(host='0.0.0.0', port=port)
+    app.run_server(debug=True, host='0.0.0.0', port=8080)
 
 
 
